@@ -1,5 +1,5 @@
 # Pagination-PHP
-A pagination class in PHP which supports ajax call support as well
+An easy to implement pagination class in PHP which also supports ajax call function as a target for paginations links  
 
 Steps to integrate :
 1) Include pagination.php file in your code
@@ -12,14 +12,19 @@ Steps to integrate :
 
 Features : 
 
-	1) This pagination class also supports a call to JavaScript function as target of pagination links; in case your using ajax call for 
-	fetching the data.
+	1) This pagination class also supports a call to JavaScript function as a target of pagination links; in case your using ajax call for fetching the data.
 	
-	2) In that case just set render mode as 'JS' and set the JavaScript function name to be called. 
-		E.g. setRenderMode('JS')
+	2) If you want to set js function as an action to pagination links, just pass your function name to JSCallFunction function and set render mode as 'JS'.
+		E.g. 
+			setRenderMode('JS')
+			$pagination->setJSCallFunction('loadData');
+
 		Note : Don't mention brackets for function. they will be added automatically.
-	
-	3) For styling the pagination links Twitter Bootstrap classes have been used. you can customise style by editing that css sheets.		
+	3) If you want to use direct callback link, then just pass 'PHP' to JSCallFunction function, or dont call it at all. class will automatically pick PHP as a method.
+
+	4) In PHP callback link case, you can also pass optional actual web link to the function render() while rendering the pagination links. if you dont pass the link, class will pick PHP_SELF as a link and will create result link by appending '?page=<page_no>' to it.
+
+	5) For styling the pagination links Bootstrap classes have been used. you can customize style by editing that css sheets or replacing them.		
 		
 Sample Code :
 
