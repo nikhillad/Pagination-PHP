@@ -2,6 +2,7 @@
 An easy to implement pagination class in PHP which also supports ajax call function as a target for paginations links  
 
 Steps to integrate :
+
 1) Include pagination.php file in your code
 
 2) Create a object of pagination class

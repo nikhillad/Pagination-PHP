@@ -13,7 +13,7 @@
 		public $total_records;
 		public $db_connection;
 		public $page;
-		public $render_mode;
+		public $render_mode = 'PHP';
 		public $js_call_function;
 			
 
