@@ -2,9 +2,9 @@
 	//Pagination class
 
 	//Author : Nikhil Lad
-	//Email : nikhil.lad@disney.com
+	//Email : mail@nikhillad.com
 	//Date : 25th January 2015	
-	//version : 1.0
+	//version : 1.1
 
 	class pagination
 	{
@@ -18,7 +18,7 @@
 			
 
 		//render pagination links
-		public function render()
+		public function render(callback_link = '')
 		{	
 			//get total records
 			$total_records = $this->getTotalRecords();
@@ -57,7 +57,10 @@
 
 				if($render_mode == 'PHP')
 				{
-					$_PHP_SELF = $_SERVER['PHP_SELF'];
+					if($callback_link != '')
+						$_PHP_SELF = $callback_link;
+					else
+						$_PHP_SELF = $_SERVER['PHP_SELF'];
 
 					//if number of pages is less than the nunber of max links per view
 					if($total_pages < $totalLinks)
