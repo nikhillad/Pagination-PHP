@@ -71,6 +71,13 @@
 			echo '</table>';
 
 		?>
+		<!-- You can send optional call back link as a parameter to below render function -->
+		<!-- this link will be assigned to the pagination buttons as 'href' with '?page=<page_no>' appended -->
+		<!-- If you do not send any link to it, class will take PHP_SELF as a link. -->
+		<!-- Example: $pagination->render('mywebsite.com/mypage/list') 
+				this will generate link like - mywebsite.com/mypage/list?page=<page_no> and
+				assing it to pagination buttons -->
+				 
 		<?php echo $pagination->render(); ?>
 		</div>
 	</div>
