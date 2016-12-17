@@ -95,3 +95,5 @@ Sample Code :
 				assing it to pagination buttons -->
 				 
 		<?php echo $pagination->render(); ?>
+		
+Enjoy!
